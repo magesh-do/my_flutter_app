@@ -3,7 +3,7 @@ version: 2.1
 executors:
   flutter-executor:
     docker:
-      - image: circleci/flutter:latest
+      - image: circleci/flutter:3.7.0  # Example tag, verify if this exists
 
 jobs:
   build:
@@ -31,4 +31,3 @@ workflows:
   flutter-build:
     jobs:
       - build
-
