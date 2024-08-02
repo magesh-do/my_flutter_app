@@ -1,13 +1,9 @@
 version: 2.1
 
-executors:
-  flutter-executor:
-    docker:
-      - image: circleci/flutter:3.7.0  # Example tag, verify if this exists
-
 jobs:
   build:
-    executor: flutter-executor
+    docker:
+      - image: circleci/flutter:3.7.0  # Example tag, verify if this exists
     steps:
       - checkout
       - run:
