@@ -3,6 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
+        pull: circleci/flutter:3.7.0
       - image: circleci/flutter:3.7.0  # Example tag, verify if this exists
     steps:
       - checkout
