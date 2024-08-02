@@ -1,0 +1,20 @@
+version: 1.0
+
+workflows:
+  flutter-workflow:
+    name: Flutter Workflow
+    max_build_duration: 60
+    source:
+      type: git
+      url: https://github.com/your-username/simple_app.git
+      branch: main
+    scripts:
+      - name: Install dependencies
+        script: flutter pub get
+      - name: Run tests
+        script: flutter test
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      artifacts:
+        - build/app/outputs/flutter-apk/app-release.apk
